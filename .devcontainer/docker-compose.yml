@@ -12,7 +12,7 @@ services:
       dockerfile: .devcontainer/Dockerfile
       # image: fagnerpimentel/ros2-env:latest
       args:
-        ROS_DISTRO: humble
+        ROS_DISTRO: jazzy
     container_name: ros-env
     ipc: host
     volumes:
@@ -29,4 +29,5 @@ services:
       - DONT_PROMPT_WSL_INSTALL=No_Prompt_please
     ports:
       - "3001:80"
-    command: code serve-web --host 0.0.0.0 --port 80 --without-connection-token --accept-server-license-terms #&& sleep infinity
+    # command: code serve-web --host 0.0.0.0 --port 80 --without-connection-token --accept-server-license-terms
+    command: sleep infinity
